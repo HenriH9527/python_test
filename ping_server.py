@@ -38,11 +38,11 @@ else:
     logfilename = os.path.join(logdir, logfile)
     confdir = os.getenv('my_config')
     conffile = (appgroup + '_servers_' + site + '.txt')
-    coffilename = os.path. join(confdir, conffile)
+    conffilename = os.path. join(confdir, conffile)
 
     f = open(logfilename, 'w')
     for server in open(conffilename):
-        ret = subprocess.call(myping + server, shell=True, stdout=f, stderr = suprocess.STDOUT)
+        ret = subprocess.call(myping + server, shell=True, stdout=f, stderr = subprocess.STDOUT)
 
         if ret == 0:
             f.write(server.strip() + 'is alive' + '\n')
