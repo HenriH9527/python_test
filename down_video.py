@@ -5,7 +5,7 @@
 import subprocess
 import sys
 
-#sys.argv[0] 表示程序本省 argv[1],argv[2]...表示程序外部引用的部分 
+#sys.argv[0] 表示程序本身 argv[1],argv[2]...表示程序外部引用的部分 
 video_link, threads = sys.argv[1], sys.argv[2]
 
 subprocess.run([
